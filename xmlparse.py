@@ -2,8 +2,7 @@ from card import Card, filize
 from card import Card
 import csv
 import re
-
-SET_CODE = 'SHO'
+import sys
 
 try:
     import xml.etree.cElementTree as ET
@@ -19,7 +18,6 @@ class Set:
 
 def entriestocards(xmlfile, cards):
     f = open(xmlfile)
-    settag = ET.Element("set")
     tree = ET.parse(f)
     f.close()
     root = tree.getroot()
@@ -27,12 +25,14 @@ def entriestocards(xmlfile, cards):
         try:
             for element in c.findall('set'): #remove set tags from previous xml loads
                 c.remove(element)
-                print('found and removed set')
-
+                print('found and removed set tag')
+            cardtext = c.find('text').text
             card = Card(c.find('name').text,c.find('text').text)
+            settag = ET.Element("set")
             settag.set('picURL', card.image)
-            settag.text = SET_CODE
+            settag.text = set_code
             c.insert(1, settag)
+            print(settag.attrib)
             print('inserted set tag')
             cards.append(card) # add card to cards list
 
@@ -40,7 +40,7 @@ def entriestocards(xmlfile, cards):
             print("card missing attributes")
             continue
 
-    tree.write(xmlfile)
+    tree.write(xmlfile[:-4] + "-cardized.xml")
     return cards
 
 
@@ -48,7 +48,15 @@ def entriestocards(xmlfile, cards):
 
 
 
-set = Set("shonen showdown")
+try:
+    set = Set(sys.argv[1])
+except:
+    set = Set(input("Enter exact name of xml file, without extension: "))
+try:
+    set_code = sys.argv[2]
+except:
+    set_code = set.name[:3].upper()
+
 cards = []
 filename = f"{XML_PATH}{filize(set.name, 'xml')}"
 cards = entriestocards(filename, cards)
