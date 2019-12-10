@@ -22,7 +22,7 @@ Compatability with Pillow hasn't been tested yet, but try changing the import st
 This script is ideal for converting spreadsheets of information into card-sized images with text on them. You can use XML data if you already haven't, but if you don't, follow <a href="https://www.excel-easy.com/examples/xml.html">this tutorial</a>. (Haven't tried with Google Sheets or OpenOffice yet, but there should be a way...)
 
 It doesn't matter what your xml looks like, as long as it conforms to the following criteria.
-1. The root tag has elements containing card data as direct children--one element per card
+1. The root tag has elements containing card data as direct children--one element per card (note that it doesn't matter what the tag is actually called)
 2. The card carrying elements each have one ```name``` element and one ```text``` element
 
 The following is an example of valid cardizer input xml:
@@ -49,5 +49,5 @@ To make your cards (images), simply run ```python xmlparse.py [name of xml file]
 
 ### Cockatrizer Script
 
-To reformat your xml for use in Cockatrice, simply run ```python cockatrize.py``` and enter the filename of the xml output by xmlparser (should be called ```[name of original xml file]-cardized.xml```). Put the resulting xml in the custom sets folder, move your images to the custom images folder (both can be accessed in the "Card Database" dropdown), and restart Cockatrice. 
+To reformat your xml for use in Cockatrice, run ```python cockatrize.py``` and enter the filename of the xml output by xmlparser (should be called ```[name of original xml file]-cardized.xml```). Put the resulting xml in the custom sets folder, move your images to the custom images folder (both can be accessed in the "Card Database" dropdown), and restart Cockatrice. 
 
