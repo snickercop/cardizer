@@ -4,7 +4,7 @@ Cardizer is a collection of python scripts for converting spreadsheets of card n
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine.
 
 ### Prerequisites
 
@@ -19,7 +19,7 @@ Compatability with Pillow hasn't been tested yet, but try changing the import st
 
 ### XML Input Format
 
-This script is ideal for converting spreadsheets of information into card-sized images with text on them. You can use XML data if you already haven't, but if you don't, follow <a href="https://www.excel-easy.com/examples/xml.html">this tutorial</a>. (Haven't tried with Google Sheets or OpenOffice yet, but there should be a way...)
+This script is ideal for converting spreadsheets of information into card-sized images with text on them. You can use XML data if you have it already, but if you don't, follow <a href="https://www.excel-easy.com/examples/xml.html">this tutorial</a>. (Haven't tried with Google Sheets or OpenOffice yet, but there should be a way...)
 
 It doesn't matter what your xml looks like, as long as it conforms to the following criteria.
 1. The root tag has elements containing card data as direct children--one element per card (note that it doesn't matter what the tag is actually called)
