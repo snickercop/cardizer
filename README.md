@@ -1,6 +1,6 @@
 # Cardizer
 
-Cardizer is a collection of python scripts for converting spreadsheets of card name/rulestext data into images, for prototyping in tabletop simulators such as Cockatrice.
+Cardizer is a collection of python scripts for converting spreadsheets of card name/rulestext data into images, for prototyping in tabletop simulators such as [Cockatrice](https://github.com/Cockatrice/Cockatrice).
 
 ## Getting Started
 
