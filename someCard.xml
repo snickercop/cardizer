@@ -1,0 +1,21 @@
+<card-data>
+	<record>
+		<name>Netcaster Spider</name>
+		<text>Reach (This creature can block creatures with flying.)
+Whenever Netcaster Spider blocks a creature with flying, Netcaster Spider gets +2/+0 until end of turn.
+		</text>
+	</record>
+	
+	<record>
+		<name>Hypothesizzle</name>
+		<text>Draw two cards. Then you may discard a nonland card. When you do, 
+		Hypothesizzle deals 4 damage to target creature.
+		</text>
+	</record>
+		
+	<record>
+		<name>Hero of Precinct One</name>
+		<text>Whenever you cast a multicolored spell, create a 1/1 white Human creature token.
+		</text>
+	</record>
+</card-data>
